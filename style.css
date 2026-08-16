@@ -864,3 +864,50 @@ body {
         text-align: center;
     }
 }
+
+/* --- MOBILE LAYOUT & OVERFLOW FIXES --- */
+@media (max-width: 550px) {
+    /* Prevent side scrolling and edge cut-offs */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* Keep container padded and centered without expanding bounds */
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Fix navbar grid alignment so logo stays centered */
+    .nav-container {
+        grid-template-columns: 40px 1fr 40px;
+        width: 100%;
+    }
+
+    .logo-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Prevent single-line tagline from pushing past the screen edge */
+    .sketch-tagline {
+        white-space: normal;
+        word-break: break-word;
+        font-size: 0.9rem;
+    }
+
+    /* Ensure product grid images fit screen width cleanly */
+    .product-grid, 
+    .product-info, 
+    .product-gallery {
+        width: 100%;
+        max-width: 100%;
+    }
+}
