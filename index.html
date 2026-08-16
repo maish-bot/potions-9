@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- IMMEDIATE LOCK GATEWAY (Desktop, Tablet, Mobile) -->
+    <script>
+      const IS_SITE_LOCKED = true; // Change to false to open store to everyone
+      if (IS_SITE_LOCKED && sessionStorage.getItem('siteUnlocked') !== 'true') {
+        window.location.replace('password.html');
+      }
+    </script>
+    
+    <!-- SEO Meta Tags -->
+    <title>POTIONS — Real Deal Scalp Oil | Scalp Psoriasis & Dry Scalp Care</title>
+    <meta name="description" content="Scalp care formulated for dry scalp and psoriasis relief. Packed with Grapeseed, Jojoba, Neem, Rosemary, and Tea Tree oils.">
+    <meta name="keywords" content="scalp oil, dry scalp treatment, scalp psoriasis oil, natural hair oil, rosemary oil, tea tree oil for scalp, POTIONS hair care">
+    <link rel="canonical" href="https://yourdomain.com/">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="POTIONS — Real Deal Scalp Oil">
+    <meta property="og:description" content="Target dry scalp and psoriasis symptoms with 100% pure botanical oils. Light feel, maximum hydration.">
+    <meta property="og:image" content="DSC09968.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Syne:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <!-- Mobile Hamburger Button -->
+            <button class="mobile-menu-btn" id="menu-toggle" aria-label="Toggle Navigation">
+                &#9776;
+            </button>
+
+            <div class="nav-left" id="nav-menu">
+                <a href="#product-buy" class="nav-link">SHOP</a>
+                <a href="#ingredients-section" class="nav-link">INGREDIENTS</a>
+                <a href="#reviews" class="nav-link">REVIEWS</a>
+            </div>
+
+            <!-- Centered Logo -->
+            <a href="#" class="logo-link">
+                <img src="potions-logo.png" alt="POTIONS Logo" class="nav-logo">
+            </a>
+
+            <!-- Right Spacer for Dead-Center Alignment -->
+            <div class="nav-right"></div>
+        </div>
+    </nav>
+
+    <!-- MAIN PRODUCT DETAIL SECTION -->
+    <main class="product-section" id="product-buy">
+        <div class="container product-grid">
+            
+            <!-- Gallery Layout -->
+            <div class="product-gallery">
+
+                <div class="img-container main-img">
+                    <img src="scalp-main2.jpg" alt="Application of POTIONS Real Deal Scalp Oil">
+                </div>
+
+                <div class="gallery-row">
+
+                    <div class="img-container sub-img">
+                        <img src="scalp-bottle.jpg" alt="Bottle of POTIONS Real Deal Scalp Oil">
+                    </div>
+
+                    <div class="img-container sub-img">
+                        <img src="scalp-closeup.jpg" alt="Close up view of natural scalp oil application">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Right Side Purchase Area -->
+            <div class="product-info">
+                <h1 class="product-title">Real Deal Scalp Oil</h1>
+                
+                <div class="review-stars-summary" id="reviews">
+                    <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+                    <span class="rating-text">4.9 / 5.0 (SHOPIFY REVIEWS)</span>
+                </div>
+
+                <div class="price-container">
+                    <span class="price">£14.99</span>
+                </div>
+
+                <!-- Variant Selector -->
+                <div class="control-group">
+                    <span class="group-label">VOLUME</span>
+                    <div class="pill-container">
+                        <button class="pill-btn active" type="button">120ml</button>
+                    </div>
+                </div>
+
+                <!-- Add to Cart CTA -->
+                <div class="purchase-stack">
+                    <div class="quantity-selector">
+                        <button class="qty-btn" id="qty-minus" type="button" aria-label="Decrease quantity">-</button>
+                        <input type="number" id="qty-input" value="1" min="1" readonly aria-label="Quantity">
+                        <button class="qty-btn" id="qty-plus" type="button" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button class="add-to-cart-btn" type="button">BAG NOW</button>
+                </div>
+
+                <h2 class="sketch-tagline">The only oil you’ll ever need</h2>
+
+                <!-- Bullet Points List -->
+                <ul class="sketch-bullet-list">
+                    <li>Lightweight</li>
+                    <li>Smells good</li>
+                    <li>Easy to apply</li>
+                    <li>Screw off cap</li>
+                    <li>A little goes a long way</li>
+                </ul>
+
+                <!-- Accordion Stack -->
+                <div class="accordion-stack">
+                    <div class="accordion-item" id="how-to">
+                        <button class="accordion-trigger" type="button">
+                            <span>HOW TO USE</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-panel">
+                            <div class="accordion-content">
+                                Designed for people with Type 4 hair and extremely dry scalps. Our scalp oil will leave your hair feeling hella soft. For best results, we suggest using this as a pre-shampoo just before you wash your hair or you can use it on your scalp and hair 2-3 times a week. Whatever you do, don’t overdo it. A little goes a long way wid this one.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" id="ingredients-section">
+                        <button class="accordion-trigger" type="button">
+                            <span>INGREDIENTS</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-panel">
+                            <div class="accordion-content">
+                                Grapeseed Oil, Jojoba Oil, Apricot Kernel Oil, Neem Oil, Tea Tree Oil, Rosemary Oil, Peppermint Oil, Bergamot Oil, Vitamin E Oil.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" id="benefits">
+                        <button class="accordion-trigger" type="button">
+                            <span>SCALP CARE BENEFITS</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-panel">
+                            <div class="accordion-content">
+                                Fighting dry scalp and psoriasis one stubborn flake at a time. (NOTE: THIS OIL WILL NOT CURE YOUR SCALP PSORIASIS, BUT IT WILL HELP FIGHT IT.)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- "What It Does" Callout Section -->
+                <div class="what-it-does-box">
+                    <h3 class="what-heading">WHAT IT DOES</h3>
+                    <p class="what-text">
+                        Gives your hair and scalp all the goodness it needs without leaving your hair and hands feeling too greasy.
+                    </p>
+                    <ul>
+                        <li>Hydrates and soothes dry, itchy scalp</li>
+                        <li>Reduces inflammation and irritation</li>
+                        <li>Enhances hair shine and manageability</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <span class="logo">POTIONS</span>
+                <p class="footer-tagline">SCALP CARE. RAW INGREDIENTS. ZERO EXCUSES.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">NAVIGATION</h4>
+                <ul class="footer-list">
+                    <li><a href="#product-buy">Shop Oil</a></li>
+                    <li><a href="#ingredients-section">Ingredients</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">HELP & CARE</h4>
+                <ul class="footer-list">
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">Psoriasis Care FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">CONNECT</h4>
+                <p class="footer-text">Follow the drop on Instagram:</p>
+                <a href="https://www.instagram.com/potionsssss/" target="_blank" class="footer-social-btn icon-only" aria-label="Follow POTIONS on Instagram">
+                    <svg class="instagram-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    
+        <div class="container footer-bottom">
+            <p>&copy; 2026 POTIONS. ALL RIGHTS RESERVED.</p>
+            <div class="payment-badges">
+                <span>VISA</span>
+                <span>MASTERCARD</span>
+                <span>AMEX</span>
+                <span>APPLE PAY</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPTS -->
+    <script>
+        // Quantity Controls
+        const qtyInput = document.getElementById('qty-input');
+        
+        document.getElementById('qty-minus').addEventListener('click', () => {
+            let val = parseInt(qtyInput.value);
+            if (val > 1) qtyInput.value = val - 1;
+        });
+
+        document.getElementById('qty-plus').addEventListener('click', () => {
+            let val = parseInt(qtyInput.value);
+            qtyInput.value = val + 1;
+        });
+
+        // Accordion Controls
+        const triggers = document.querySelectorAll('.accordion-trigger');
+        triggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const item = trigger.parentElement;
+                const isOpen = item.classList.contains('open');
+                
+                document.querySelectorAll('.accordion-item').forEach(el => {
+                    el.classList.remove('open');
+                    el.querySelector('.accordion-icon').textContent = '+';
+                });
+                
+                if (!isOpen) {
+                    item.classList.add('open');
+                    item.querySelector('.accordion-icon').textContent = '−';
+                }
+            });
+        });
+
+        // Mobile Nav Drawer & Smooth Scrolling
+        const menuToggle  = document.getElementById('menu-toggle');
+        const navMenu     = document.getElementById('nav-menu');
+        const allNavLinks = document.querySelectorAll('.nav-left .nav-link, .footer-list a');
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                const isOpen = navMenu.classList.toggle('mobile-open');
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+                menuToggle.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+            });
+        }
+
+        allNavLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+
+                    if (navMenu) navMenu.classList.remove('mobile-open');
+                    document.body.style.overflow = '';
+                    if (menuToggle) menuToggle.innerHTML = '&#9776;';
+
+                    setTimeout(() => {
+                        const targetEl = document.querySelector(href);
+                        if (targetEl) {
+                            if (targetEl.classList.contains('accordion-item')) {
+                                document.querySelectorAll('.accordion-item').forEach(el => {
+                                    el.classList.remove('open');
+                                    el.querySelector('.accordion-icon').textContent = '+';
+                                });
+                                targetEl.classList.add('open');
+                                targetEl.querySelector('.accordion-icon').textContent = '−';
+                            }
+
+                            const navHeight = document.querySelector('.navbar')?.offsetHeight || 80;
+                            const targetPosition = targetEl.getBoundingClientRect().top + window.pageYOffset - navHeight;
+
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }, 50);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
