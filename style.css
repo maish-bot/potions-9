@@ -21,6 +21,8 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 120px;
     font-size: 16px;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -29,6 +31,7 @@ body {
     color: var(--text-white);
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+    width: 100%;
     text-transform: uppercase;
 }
 
@@ -36,6 +39,7 @@ body {
     max-width: 1320px;
     margin: 0 auto;
     padding: 0 1.5rem;
+    width: 100%;
 }
 
 /* --- OVERLAY STYLES --- */
@@ -490,16 +494,14 @@ body {
     transform: translateY(0);
 }
 
-/* Slightly larger single-line tagline */
 .sketch-tagline {
     font-family: var(--font-heading);
     font-size: 1.1rem;
-    font-style: normal;          /* Removes italicization to match the image */
-    font-weight: 900;             /* Ultra-heavy weight matching the image */
+    font-style: normal;
+    font-weight: 900;
     letter-spacing: 0.5px;
     color: var(--accent-orange);
     margin-top: 0.25rem;
-    white-space: nowrap;          /* Keeps it strictly on one line */
 }
 
 .sketch-bullet-list {
@@ -804,15 +806,21 @@ body {
     }
 }
 
-/* Mobile Phones */
+/* Mobile Phones (Unified Media Query) */
 @media (max-width: 550px) {
+    .container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
     .product-title {
         font-size: 2rem;
     }
 
     .sketch-tagline {
-        font-size: 0.8rem; /* Keeps font bold and unified on 1 line across all phone sizes */
-        white-space: nowrap;
+        font-size: 0.9rem;
+        white-space: normal;
+        word-break: break-word;
     }
 
     .purchase-stack {
@@ -832,7 +840,7 @@ body {
     }
 
     .overlay-input {
-        font-size: 16px !important; /* Prevents mobile Safari auto-zoom on focus */
+        font-size: 16px !important;
         padding: 0.9rem 0.75rem;
     }
 
@@ -863,47 +871,7 @@ body {
         gap: 1rem;
         text-align: center;
     }
-}
 
-/* --- MOBILE LAYOUT & OVERFLOW FIXES --- */
-@media (max-width: 550px) {
-    /* Prevent side scrolling and edge cut-offs */
-    html, body {
-        overflow-x: hidden;
-        width: 100%;
-    }
-
-    /* Keep container padded and centered without expanding bounds */
-    .container {
-        width: 100%;
-        max-width: 100%;
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    /* Fix navbar grid alignment so logo stays centered */
-    .nav-container {
-        grid-template-columns: 40px 1fr 40px;
-        width: 100%;
-    }
-
-    .logo-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    /* Prevent single-line tagline from pushing past the screen edge */
-    .sketch-tagline {
-        white-space: normal;
-        word-break: break-word;
-        font-size: 0.9rem;
-    }
-
-    /* Ensure product grid images fit screen width cleanly */
     .product-grid, 
     .product-info, 
     .product-gallery {
